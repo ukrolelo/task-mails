@@ -1,0 +1,39 @@
+<!ENTITY linkTask    "Link to tasks">
+<!ENTITY linkNewTask "Link to a new task">
+<!ENTITY linkMail    "Link to mails">
+<!ENTITY unlinkTasks "Unlink tasks">
+<!ENTITY unlinkMail  "Unlink mails">
+<!ENTITY goNextTask  "Go to next task {0}">
+<!ENTITY goNextMail  "Go to next mail {0}">
+<!ENTITY selectMail  "Select mails">
+<!ENTITY goFolder    "Go to Folder">
+<!ENTITY add         "add">
+<!ENTITY addWithLink "add with link">
+<!ENTITY update      "update">
+<!ENTITY delete      "delete">
+<!ENTITY save        "Save">
+<!ENTITY cancel      "Cancel">
+<!ENTITY moveTask    "Move to">
+<!ENTITY moveHere    "Here">
+<!ENTITY state       "State">
+<!ENTITY title       "Title">
+<!ENTITY detail      "Detail">
+<!ENTITY detailTTP   "Entrée or CTRL-Entrée = Save, SHIFT-Echap = Cancel">
+<!ENTITY infoState     "info">
+<!ENTITY toDoState     "to do">
+<!ENTITY toFollowState "to follow">
+<!ENTITY waitingState  "waiting">
+<!ENTITY doneState     "done">
+<!ENTITY stateFilterTTP      "State filter">
+<!ENTITY activeFilterTTP     "Includes 'to do' and 'to follow'">
+<!ENTITY currentFilterTTP    "All tasks except 'done'">
+<!ENTITY linkMailHeader    "link with mails">
+<!ENTITY linkTaskHeader    "link with tasks">
+<!ENTITY activeStateFilter  "active">
+<!ENTITY currentStateFilter "current">
+<!ENTITY allStateFilter     "all">
+<!ENTITY mailViewFilter      "mail">
+<!ENTITY subFolderViewFilter "subfolders">
+<!ENTITY folderViewFilter    "folder">
+<!ENTITY viewFilterTTP       "View filter">
+<!ENTITY mailViewTTP         "Only tasks linked to current email">

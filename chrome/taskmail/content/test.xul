@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://taskmail/locale/taskmail-overlay.dtd">
+
+<window
+    id="findfile-window"
+    title="Find Files"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type='application/x-javascript'  src="chrome://taskmail/content/taskmail-db.js"/>
+	<script type='application/x-javascript'  src="chrome://taskmail/content/taskmail-overlay.js"/>
+	<script type='application/x-javascript'  src='chrome://taskmail/content/taskmail-column.js'/>
+  	
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="string-bundle" src="chrome://taskmail/locale/taskmail-overlay.properties"/>
+	</stringbundleset>
+	
+	<!-- ajoute une entrée au menu contextuel de la liste des mails -->
+	<menupopup id="mailContext">
+		<menuitem label="&linkTask;"    accesskey="L" oncommand="linkTask()"/>
+		<menuitem label="&linkNewTask;" accesskey="N" oncommand="beginAddTaskWithLink()"/>
+		<menuitem label="&unlinkTasks;" accesskey="D" oncommand="unlinkTask()"/>
+		<menuitem label="&goNextTask;"  accesskey="A" oncommand="showLinkedTask()"/>
+		<menuseparator/>
+	</menupopup>
+	
+	<vbox id="threadPaneBox">
+		<splitter/>
+		<vbox flex="0.5" >
+			<menupopup id="row-menu">
+				<menuitem label="&add;"                               oncommand="beginAddTask()"/>
+				<menuitem label="&addWithLink;"                       oncommand="beginAddTaskWithLink()"/>
+				<menuitem label="&update;"                            oncommand="beginUpdateTask()"/>
+				<menuitem label="&delete;"                            oncommand="removeTask()"/>
+				<menuitem label="&linkMail;"            accesskey="L" oncommand="linkTask()"/>
+				<menuitem label="&unlinkMail;"          accesskey="D" oncommand="unlinkTask()"/>
+				<menuitem label="&goNextMail;"          accesskey="A" oncommand="showLinkedMail()"/>
+				<menu id="taskContext-moveMenu"
+					label="&moveTask;"
+					accesskey="D"
+					oncommand="moveTask(event.target._folder)">
+					<menupopup id="taskContext-fileHereMenu"
+						type="folder"
+						mode="filing"
+						showFileHereLabel="true"
+						showRecent="false"
+						fileHereLabel="&moveHere;"
+						fileHereAccessKey="I"/>
+				</menu>
+			</menupopup>
+      
+			<listbox id="taskList" ondblclick="doubleClikTask()" context="row-menu" 
+					 seltype="multiple" flex="1" minheight="75">
+				<listhead>
+					<listheader label="&state;"/>
+					<listheader label="&title;"/>
+					<listheader tooltiptext="&linkMailHeader;" class="listheader-icon taskColumnHeader"/>
+				</listhead>
+				<listcols>
+					<listcol/>
+					<listcol flex="1"/>
+					<listcol/>
+				</listcols>
+			</listbox>
+        		
+			<vbox collapsed="true" id="addTask" flex="10">
+				<keyset>
+					<!-- control entrée est utilisable dans le textare -->
+					<key keycode="VK_RETURN" oncommand="alert('return');"/>
+					<key modifiers="control" keycode="VK_RETURN" oncommand="saveTask();"/>
+					<key keycode="VK_ESCAPE" oncommand="alert('toto');"/>
+				</keyset>
+				<grid flex="1">
+					<columns>
+						<column/>
+						<column flex="1"/>
+					</columns>
+					<rows>
+						<row>
+							<label value="&title; :" control="taskTitle"/>
+							<textbox id="taskTitle" flex="1"/>
+						</row>
+						<row flex="1"  minheight="75">
+							<label value="&detail; :" command="taskDesc"/>
+							<textbox id="taskDesc" multiline="true" rows="5"/>
+						</row>			
+						<row>		
+							<label value="&state; :"/>
+							<menulist  id="taskState">
+								<menupopup>
+									<menuitem label="&infoState;"     value="0"/>
+									<menuitem label="&toDoState;"     value="1"/>
+									<menuitem label="&toFollowState;" value="2"/>
+									<menuitem label="&waitingState;"  value="3"/>
+									<menuitem label="&doneState;"     value="4"/>
+								</menupopup>
+							</menulist>
+						</row>
+					</rows>
+				</grid>
+				<hbox>
+					<spacer flex="1"/>
+					<button label="&save;"  oncommand="saveTask()"/>
+					<button label="&cancel;" oncommand="cancelSaveTask()"/>
+				</hbox>
+			</vbox>
+  		
+			<hbox>
+				<spacer flex="1"/>
+				<menulist  id="stateFilter"  oncommand="stateFilterChange()">
+					<menupopup>
+						<menuitem label="&activeStateFilter;"   value="12"/>
+						<menuitem label="&toDoState;"           value="1"/>
+						<menuitem label="&toFollowState;"       value="2"/>
+						<menuitem label="&currentStateFilter;"  value="1230"/>
+						<menuitem label="&allStateFilter;"      value=""/>
+					</menupopup>
+				</menulist>
+				<menulist  id="viewFilter"  oncommand="viewFilterChange()">
+					<menupopup>
+						<menuitem label="&mailViewFilter;"       value="2"/>
+						<menuitem label="&subFolderViewFilter;" value="1" selected="true"/>
+						<menuitem label="&folderViewFilter;"     value="0"/>
+					</menupopup>
+				</menulist>
+			</hbox>
+		</vbox>
+	</vbox>
+	
+	<tree id="threadTree">
+		<treecols id="threadCols">
+			<splitter class="tree-splitter" />
+			<treecol id="colTask" persist="hidden ordinal" label="Lien"
+				currentView="unthreaded" fixed="true" class="treecol-image taskColumnHeader"
+				tooltiptext="&linkTaskHeader;" editable="true"/>
+		</treecols>
+	</tree>
+	
+	<menubar id="mail-menubar">
+		<menu id="TaskMailMenu" label="Tasks and mails">
+			<menupopup>
+				<menuitem label="toto" oncommand="window.open('chrome://taskmail/content/test.xul','chrome');"/>
+			</menupopup>
+				
+		</menu>			
+	</menubar>
+</window>
