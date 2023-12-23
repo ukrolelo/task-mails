@@ -1,0 +1,33 @@
+<!ENTITY window.title         "Task &amp; mail Opties">
+<!ENTITY prefs.pane.report    "Rapportage">
+<!ENTITY states.caption       "Taak statussen">
+<!ENTITY report.caption       "Taak rapportage">
+<!ENTITY fields.comment       "In velden 'AAN' en 'CC': Adressen scheiden met een komma.">
+<!ENTITY field.to             "Aan">
+<!ENTITY field.cc             "CC">
+<!ENTITY field.subject        "Onderwerp">
+<!ENTITY field.body           "Bericht">
+<!ENTITY reset                "Reset">
+<!ENTITY reset.key            "R">
+<!ENTITY prefs.pane.state     "Statussen">
+<!ENTITY prefs.state.intro    "Statussen kunnen worden gebruikt om taken te organiseren en filteren.">
+<!ENTITY prefs.state.warning  "Waarschuwing: verwijder geen actieve status.">
+<!ENTITY prefs.state.done     "De status 'klaar' kan wel worden hernoemd, maar moet dezelfde betekenis houden.">
+<!ENTITY addState             "Toevoegen">
+<!ENTITY editState            "Bewerken">
+<!ENTITY removeState          "Verwijderen">
+<!ENTITY addState.key         "T">
+<!ENTITY editState.key        "B">
+<!ENTITY removeState.key      "V">
+<!ENTITY upState              "OmHoog">
+<!ENTITY upState.key          "H">
+<!ENTITY downState            "OmLaag">
+<!ENTITY downState.key        "L">
+<!ENTITY taskmail-UI            "Interface">
+<!ENTITY taskmail-UI-label      "Show linked messages when select a task with :">
+<!ENTITY taskmail-UI-left       "Left button">
+<!ENTITY taskmail-UI-left-key   "L">
+<!ENTITY taskmail-UI-middle     "Middle mouse">
+<!ENTITY taskmail-UI-middle-key "M">
+<!ENTITY transientScope         "Make scope transient (on folder change, not on 'view linked message').">
+<!ENTITY transientScope-key     "t">

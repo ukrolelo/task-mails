@@ -1,0 +1,33 @@
+<!ENTITY window.title         "Einstellungen für Aufgaben &amp; eMails">
+<!ENTITY prefs.pane.report    "Report">
+<!ENTITY states.caption       "Aufgabenstatus">
+<!ENTITY report.caption       "Aufgaben Report">
+<!ENTITY fields.comment       "Bitte ein Komma zum Trennen mehrerer Adressen in den 'An' und 'CC' verwenden.">
+<!ENTITY field.to             "An">
+<!ENTITY field.cc             "CC">
+<!ENTITY field.subject        "Betreff">
+<!ENTITY field.body           "Body">
+<!ENTITY reset                "Zurücksetzen">
+<!ENTITY reset.key            "R">
+<!ENTITY prefs.pane.state     "Status">
+<!ENTITY prefs.state.intro    "'Status' kann zum Organisieren und filtern von Aufgaben verwendet werden.">
+<!ENTITY prefs.state.warning  "Warnung: Bitte keinen verwendeten Status löschen.">
+<!ENTITY prefs.state.done     "Der Status 'erledigt' kann zwar umbenannt werden, muss aber seine Bedeutung erhalten.">
+<!ENTITY addState             "Hinzufügen">
+<!ENTITY editState            "Bearbeiten">
+<!ENTITY removeState          "Löschen">
+<!ENTITY addState.key         "A">
+<!ENTITY editState.key        "E">
+<!ENTITY removeState.key      "D">
+<!ENTITY upState              "Hoch">
+<!ENTITY upState.key          "U">
+<!ENTITY downState            "Runter">
+<!ENTITY downState.key        "W">
+<!ENTITY taskmail-UI            "Interface">
+<!ENTITY taskmail-UI-label      "Zeige verlinkte Nachrichten bei Auswahl einer Aufgabe mit:">
+<!ENTITY taskmail-UI-left       "Linker Maus-Button">
+<!ENTITY taskmail-UI-left-key   "L">
+<!ENTITY taskmail-UI-middle     "Mittlerer Maus-Button">
+<!ENTITY taskmail-UI-middle-key "M">
+<!ENTITY transientScope         "Make scope transient (on folder change, not on 'view linked message').">
+<!ENTITY transientScope-key     "t">

@@ -1,0 +1,84 @@
+<!ENTITY menuAddTask            "Aggiungi attivitÃ ">
+<!ENTITY menuAddTaskWithLink    "Aggiungi attivitÃ  collegata">
+<!ENTITY menuUpdate             "Aggiorna attivitÃ ">
+<!ENTITY menuDelete             "Cancella attivitÃ ">
+<!ENTITY menuSelectLinked       "Seleziona attivitÃ  o messaggi">
+<!ENTITY menuViewTaskPane       "Pannello Tasks &amp; Mails">
+<!ENTITY menuGoNextTaskMail     "Vai alla prossima attivitÃ  o messaggio">
+<!ENTITY menuLinkTaskMail       "Collega attivitÃ  e messaggi">
+<!ENTITY menuUnlinkTaskMail     "Scollega attivitÃ  e messaggi">
+<!ENTITY menuHelp              "Aiuto">
+<!ENTITY menuHelpKey           "u">
+<!ENTITY linkTask               "Collega ad una attivitÃ ">
+<!ENTITY linkNewTask            "Collega ad una nuova attivitÃ ">
+<!ENTITY linkMail               "Collega a messaggi">
+<!ENTITY unlinkTasks            "Scollega attivitÃ ">
+<!ENTITY unlinkMail             "Scollega messaggi">
+<!ENTITY goNextTask             "Vai alla prossima attivitÃ ">
+<!ENTITY goNextMail             "Vai al prossimo messaggio">
+<!ENTITY selectMail             "Seleziona messaggi">
+<!ENTITY selectTask             "Seleziona attivitÃ ">
+<!ENTITY goFolder               "Vai alla Cartella">
+<!ENTITY viewFolderTask         "View folder's tasks">
+<!ENTITY add                    "Aggiungi">
+<!ENTITY addWithLink            "Aggiungi con collegamento">
+<!ENTITY update                 "Aggiorna attivitÃ ">
+<!ENTITY delete                 "Cancella">
+<!ENTITY markDone               "Marca come {s}">
+<!ENTITY changePriority         "Cambia prioritÃ ">
+<!ENTITY incrementPriority      "Incrementa">
+<!ENTITY decrementPriority      "Decrementa">
+<!ENTITY save                   "Salva">
+<!ENTITY cancel                 "Annulla">
+<!ENTITY moveTask               "Sposta a">
+<!ENTITY moveHere               "Qui">
+<!ENTITY state                  "Stato">
+<!ENTITY title                  "Titolo">
+<!ENTITY detail                 "Dettaglio">
+<!ENTITY priority               "PrioritÃ ">
+<!ENTITY detailTTP              "Invio o CTRL-Invio = Salva, SHIFT-Esc = Annulla">
+<!ENTITY dates                  "Date">
+<!ENTITY createDate             "Creazione">
+<!ENTITY dueDate                "Scadenza">
+<!ENTITY completeDate           "Completamento">
+<!ENTITY stateFilterTTP         "Filtro di stato">
+<!ENTITY activeFilterTTP        "Includi 'da fare' e 'da seguire'">
+<!ENTITY currentFilterTTP       "Tutte le attivitÃ  tranne 'fatto'">
+<!ENTITY linkMailHeader         "collega con messaggi">
+<!ENTITY linkTaskHeader         "collega con attivitÃ ">
+<!ENTITY filter.label           "Filtri:">
+<!ENTITY toDoStateFilter        "da fare">
+<!ENTITY toFollowStateFilter    "da seguire">
+<!ENTITY activeStateFilter      "attiva">
+<!ENTITY currentStateFilter     "attuale">
+<!ENTITY allStateFilter         "tutto">
+<!ENTITY allViewFilter          "tutte le cartelle">
+<!ENTITY mailViewFilter         "messaggio">
+<!ENTITY subFolderViewFilter    "sottocartelle">
+<!ENTITY folderViewFilter       "cartella">
+<!ENTITY hotListViewFilter      "hot list">
+<!ENTITY textFilter             "Filtra attivitÃ  ...">
+<!ENTITY stickyViewFilterTTP    "Mantenere la vista quando si cambia file?">
+<!ENTITY textFilterTTP          "Mantenere il testo del filtro quando si cambia file?">
+<!ENTITY viewFilterTTP          "Filtro viste">
+<!ENTITY allViewTTP             "AttivitÃ  di tutte le cartelle">
+<!ENTITY mailViewTTP            "Tutte le attivitÃ  collegate al messaggio corrente">
+<!ENTITY hotListViewFilterTTP   "I compiti più importanti">
+<!ENTITY addTask                "Aggiungi ad attivitÃ ">
+<!ENTITY header.subfolder       "L'attivitÃ  Ã¨ nella cartella corrente">
+<!ENTITY msgColHeadLink         "AttivitÃ  collega">
+<!ENTITY taskColHeadLink        "Messaggio collega">
+<!ENTITY taskColHeadSubfolder   "Nella Sottocartella">
+<!ENTITY createDateCol          "Creazione">
+<!ENTITY dueDateCol             "Scadenza">
+<!ENTITY completeDateCol        "Completamento">
+<!ENTITY foldernameCol          "Cartella">
+<!ENTITY composeReport          "Compila il report">
+<!ENTITY qfb-task               "AttivitÃ ">
+<!ENTITY qfb-taskTTP            "Mostra solo messaggi con attivitÃ .">
+<!ENTITY qfb-task-link          "AttivitÃ  selezionata">
+<!ENTITY qfb-task-linkTTP       "Mostra solo i messaggi collegati all'attivitÃ  selezionata.">
+<!ENTITY qfb-task-thread        "AttivitÃ  con discussioni">
+<!ENTITY qfb-task-threadTTP     "Mostra messaggi o discussioni.">
+<!ENTITY menuOptions            "Options">
+<!ENTITY menuOptionsKey         "O">

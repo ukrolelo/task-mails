@@ -1,39 +1,84 @@
-<!ENTITY linkTask    "Lier aux tâches">
-<!ENTITY linkNewTask "Lier à une nouvelle tache">
-<!ENTITY linkMail    "Lier aux emails">
-<!ENTITY unlinkTasks "Délier les taches">
-<!ENTITY unlinkMail  "Délier des emails">
-<!ENTITY goNextTask  "Aller à la tache suivante {0}">
-<!ENTITY goNextMail  "Aller à l'email suivant {0}">
-<!ENTITY selectMail  "Sélectionner les emails">
-<!ENTITY goFolder    "Aller au Folder">
-<!ENTITY add         "ajouter">
-<!ENTITY addWithLink "ajouter liée">
-<!ENTITY update      "modifier">
-<!ENTITY delete      "supprimer">
-<!ENTITY save        "Sauver">
-<!ENTITY cancel      "annuler">
-<!ENTITY moveTask    "déplacer vers">
-<!ENTITY moveHere    "ici">
-<!ENTITY state       "Etat">
-<!ENTITY title       "Titre">
-<!ENTITY detail      "Descriptif">
-<!ENTITY detailTTP   "Entrée ou CTRL-Entrée = Sauver, SHIFT-Echap = Annuler">
-<!ENTITY infoState     "info">
-<!ENTITY toDoState     "à faire">
-<!ENTITY toFollowState "à suivre">
-<!ENTITY waitingState  "attente">
-<!ENTITY doneState     "fait">
-<!ENTITY stateFilterTTP      "Filtre d'état">
-<!ENTITY activeFilterTTP     "Les tâches 'à faire' et 'à suivre'">
-<!ENTITY currentFilterTTP    "Toutes les tâches sauf les 'faite'">
-<!ENTITY linkMailHeader      "lien avec un email">
-<!ENTITY linkTaskHeader      "lien avec une tâche">
-<!ENTITY activeStateFilter   "active">
-<!ENTITY currentStateFilter  "en cours">
-<!ENTITY allStateFilter      "tout">
-<!ENTITY mailViewFilter      "mail">
-<!ENTITY subFolderViewFilter "subfolders">
-<!ENTITY folderViewFilter    "folder">
-<!ENTITY viewFilterTTP       "Filtre de visibilité">
-<!ENTITY mailViewTTP         "Les tâches liées aux emails courants">
+<!ENTITY menuAddTask           "Ajouter une tâche">
+<!ENTITY menuAddTaskWithLink   "Ajouter une tâche liée">
+<!ENTITY menuUpdate            "Modifier une tâche">
+<!ENTITY menuDelete            "Supprimer une tâche">
+<!ENTITY menuSelectLinked      "Sélectionner tâches ou messages">
+<!ENTITY menuViewTaskPane      "Panneau Tasks &amp; Mails">
+<!ENTITY menuGoNextTaskMail    "Aller à la tâche ou message suivant">
+<!ENTITY menuLinkTaskMail      "Lier tâches et messages">
+<!ENTITY menuUnlinkTaskMail    "Délier tâches et messages">
+<!ENTITY menuHelp              "AiDe">
+<!ENTITY menuHelpKey           "D">
+<!ENTITY linkTask        "Lier aux tâches">
+<!ENTITY linkNewTask     "Lier à une nouvelle tâche">
+<!ENTITY linkMail        "Lier aux messages">
+<!ENTITY unlinkTasks     "Délier les tâches">
+<!ENTITY unlinkMail      "Délier des messages">
+<!ENTITY goNextTask      "Aller à la tâche suivante">
+<!ENTITY goNextMail      "Aller à l'email suivant">
+<!ENTITY selectMail      "Sélectionner les messages">
+<!ENTITY selectTask      "Sélectionner les tâches">
+<!ENTITY goFolder        "Aller au Folder">
+<!ENTITY viewFolderTask  "Voir les tâches de ce Folder">
+<!ENTITY add             "Ajouter">
+<!ENTITY addWithLink     "Ajouter Liée">
+<!ENTITY update          "Modifier">
+<!ENTITY delete          "Supprimer">
+<!ENTITY markDone        "Marquer comme {s}">
+<!ENTITY changePriority        "Changer la Priorité">
+<!ENTITY incrementPriority     "Incrémenter">
+<!ENTITY decrementPriority     "Décrémenter">
+<!ENTITY save                  "Sauver">
+<!ENTITY cancel                "annuler">
+<!ENTITY moveTask              "Déplacer vers">
+<!ENTITY moveHere              "ici">
+<!ENTITY state                 "Etat">
+<!ENTITY title                 "Titre">
+<!ENTITY detail                "Descriptif">
+<!ENTITY priority              "Priorité">
+<!ENTITY detailTTP             "Entrée ou CTRL-Entrée = Sauver, SHIFT-Echap = Annuler">
+<!ENTITY dates                 "Dates">
+<!ENTITY createDate            "Création">
+<!ENTITY dueDate               "Echéance">
+<!ENTITY completeDate          "Réalisation">
+<!ENTITY stateFilterTTP        "Filtre d'état">
+<!ENTITY activeFilterTTP       "Les tâches 'à faire' et 'à suivre'">
+<!ENTITY currentFilterTTP      "Toutes les tâches sauf les 'faite'">
+<!ENTITY linkMailHeader        "lien avec un message">
+<!ENTITY linkTaskHeader        "lien avec une tâche">
+<!ENTITY filter.label          "Filtres : ">
+<!ENTITY toDoStateFilter       "à faire">
+<!ENTITY toFollowStateFilter   "à suivre">
+<!ENTITY activeStateFilter     "active">
+<!ENTITY currentStateFilter    "en cours">
+<!ENTITY allStateFilter        "tout">
+<!ENTITY allViewFilter         "tous les folders">
+<!ENTITY mailViewFilter        "message">
+<!ENTITY subFolderViewFilter   "subfolders">
+<!ENTITY folderViewFilter      "folder">
+<!ENTITY hotListViewFilter     "hot list">
+<!ENTITY textFilter            "Filtrer les tâches ...">
+<!ENTITY stickyViewFilterTTP   "Conserver la vue lors des changements de dossier ?">
+<!ENTITY textFilterTTP         "Conserver le filtre textuel lors des changements de dossier ?">
+<!ENTITY viewFilterTTP         "Filtre de visibilité">
+<!ENTITY allViewTTP            "Tâches de tous les folders">
+<!ENTITY mailViewTTP           "Les tâches liées aux messages courants">
+<!ENTITY hotListViewFilterTTP  "Les tâches les plus importantes">
+<!ENTITY addTask               "Ajouter une tâche">
+<!ENTITY header.subfolder      "La tâche est dans le folder courant">
+<!ENTITY msgColHeadLink        "Tâche Liée">
+<!ENTITY taskColHeadLink       "Message lié">
+<!ENTITY taskColHeadSubfolder  "Dans sous-folder">
+<!ENTITY createDateCol         "Création">
+<!ENTITY dueDateCol            "Echéance">
+<!ENTITY completeDateCol       "Réalisation">
+<!ENTITY foldernameCol         "Folder">
+<!ENTITY composeReport         "Compose le rapport">
+<!ENTITY qfb-task              "Tâche">
+<!ENTITY qfb-taskTTP           "Afficher seulement les messages ayant des tâches liées.">
+<!ENTITY qfb-task-link         "Tâche courante">
+<!ENTITY qfb-task-linkTTP      "Afficher seulement les messages liés aux tâches sélectionnées.">
+<!ENTITY qfb-task-thread       "Tâches avec discussions">
+<!ENTITY qfb-task-threadTTP    "Afficher les messages ou les discussions.">
+<!ENTITY menuOptions           "Options">
+<!ENTITY menuOptionsKey        "O">

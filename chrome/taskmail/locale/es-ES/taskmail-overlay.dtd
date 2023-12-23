@@ -1,0 +1,84 @@
+<!ENTITY menuAddTask           "Añada tarea">
+<!ENTITY menuAddTaskWithLink   "Añada tarea enlazada">
+<!ENTITY menuUpdate            "Actualice tarea">
+<!ENTITY menuDelete            "Borre tarea">
+<!ENTITY menuSelectLinked      "Seleccione tareas o correos">
+<!ENTITY menuViewTaskPane      "Panel de Tasks &amp; Mails">
+<!ENTITY menuGoNextTaskMail    "Ir a la siguiente tarea o correo">
+<!ENTITY menuLinkTaskMail      "Enlazar tareas y correos">
+<!ENTITY menuUnlinkTaskMail    "Desvincular tareas y correos">
+<!ENTITY menuHelp              "Ayuda">
+<!ENTITY menuHelpKey           "u">
+<!ENTITY linkTask     "Enlazar tareas">
+<!ENTITY linkNewTask  "Enlazar nueva tarea">
+<!ENTITY linkMail     "Enlazar correos">
+<!ENTITY unlinkTasks  "Desvincular tareas">
+<!ENTITY unlinkMail   "Desvincular correos">
+<!ENTITY goNextTask   "Siguiente tarea {0}">
+<!ENTITY goNextMail   "Siguiente correo {0}">
+<!ENTITY selectMail   "Seleccione correos">
+<!ENTITY selectTask   "Seleccione tareas">
+<!ENTITY goFolder     "Ir a carpeta">
+<!ENTITY viewFolderTask  "Ver las tareas de esta carpeta">
+<!ENTITY add          "Añadir">
+<!ENTITY addWithLink  "Añadir con enlace">
+<!ENTITY update       "Actualizar">
+<!ENTITY delete       "Borrar">
+<!ENTITY markDone     "Marcar como {s}">
+<!ENTITY changePriority      "Cambiar prioridad">
+<!ENTITY incrementPriority   "Aumentar">
+<!ENTITY decrementPriority   "Disminuir">
+<!ENTITY save                "Guardar">
+<!ENTITY cancel              "Cancelar">
+<!ENTITY moveTask            "Mover a">
+<!ENTITY moveHere            "Aquí">
+<!ENTITY state               "Estado">
+<!ENTITY title               "Título">
+<!ENTITY detail              "Detalle">
+<!ENTITY priority            "Prioridad">
+<!ENTITY detailTTP           "Enter o CTRL-Enter = Guardar, SHIFT-Esc = Cancel">
+<!ENTITY dates               "Fechas">
+<!ENTITY createDate          "Creación">
+<!ENTITY dueDate             "Vencimiento">
+<!ENTITY completeDate        "Finalización">
+<!ENTITY stateFilterTTP      "Filtro de estado">
+<!ENTITY activeFilterTTP     "Incluir 'pendiente' y 'seguir'">
+<!ENTITY currentFilterTTP    "Todas las tareas, excepto 'hecho'">
+<!ENTITY linkMailHeader    "Enlazar a correos">
+<!ENTITY linkTaskHeader    "Enlazar a tareas">
+<!ENTITY filter.label          "Filtros : ">
+<!ENTITY toDoStateFilter       "pendiente">
+<!ENTITY toFollowStateFilter   "seguir">
+<!ENTITY activeStateFilter     "activo">
+<!ENTITY currentStateFilter    "actual">
+<!ENTITY allStateFilter        "todo">
+<!ENTITY allViewFilter         "todas las carpetas">
+<!ENTITY mailViewFilter        "correos">
+<!ENTITY subFolderViewFilter   "subcarpetas">
+<!ENTITY folderViewFilter      "carpeta">
+<!ENTITY hotListViewFilter     "hot list">
+<!ENTITY textFilter            "Filtrar las tareas ...">
+<!ENTITY stickyViewFilterTTP   "Mantener la vista al cambiar de imagen?">
+<!ENTITY textFilterTTP         "Mantenga el filtro al cambiar el archivo de texto?">
+<!ENTITY viewFilterTTP         "Ver filtro">
+<!ENTITY allViewTTP            "Tareas de todas las carpetas">
+<!ENTITY mailViewTTP           "Sólo tareas enlazadas al correo actual">
+<!ENTITY hotListViewFilterTTP  "Las tareas más importantes">
+<!ENTITY addTask               "Añadir tarea">
+<!ENTITY header.subfolder      "La tarea está fuera de la actual subcarpeta">
+<!ENTITY msgColHeadLink        "Enlace a tarea">
+<!ENTITY taskColHeadLink       "Enlace a correo">
+<!ENTITY taskColHeadSubfolder  "En subcarpeta">
+<!ENTITY createDateCol         "Creación">
+<!ENTITY dueDateCol            "Vence">
+<!ENTITY completeDateCol       "Completado">
+<!ENTITY foldernameCol         "Carpeta">
+<!ENTITY composeReport         "Generar informe">
+<!ENTITY qfb-task              "Tarea">
+<!ENTITY qfb-taskTTP           "Mostrar solo mensajes con tareas">
+<!ENTITY qfb-task-link         "Tareas seleccionadas">
+<!ENTITY qfb-task-linkTTP      "Mostrar solamente mensajes enlazados a las tareas seleccionadas.">
+<!ENTITY qfb-task-thread       "Tareas con hilos">
+<!ENTITY qfb-task-threadTTP    "Muestra mensajes o hilos.">
+<!ENTITY menuOptions           "Options">
+<!ENTITY menuOptionsKey        "O">

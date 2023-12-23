@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href='chrome://taskmail/skin/taskmail-overlay.css' type='text/css'?>
+<!DOCTYPE overlay SYSTEM "chrome://taskmail/locale/taskmail-prefs.dtd">
+<prefwindow id="taskmail-prefs"      title="&window.title;"      
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+  <script type='application/x-javascript'  src="chrome://taskmail/content/taskmail-prefs.js"/>
+  
+  <stringbundleset id="stringbundleset">
+		<stringbundle id="taskmail-string-bundle-prefs" src="chrome://taskmail/locale/taskmail-prefs.properties"/>
+		<stringbundle id="taskmail-string-bundle" src="chrome://taskmail/locale/taskmail-overlay.properties"/>
+	</stringbundleset>
+	
+	<prefpane id="taskmail-pane" label="&prefs.pane.state;" onpaneload="TASKMAIL.PREFS.init();">
+    <preferences>
+      <preference id="taskmail_states"                  name="extensions.taskmail.states"                  type="string"/>
+      <preference id="taskmail_showMessageOnMouseClick" name="extensions.taskmail.showMessageOnMouseClick" type="string"/>
+      <preference id="taskmail-pref-transientScope"     name="extensions.taskmail.transientScope"          type="bool"/>
+    </preferences>
+	<groupbox>
+		<caption label="&taskmail-UI;"/>
+    	<label value="&taskmail-UI-label;"/>
+		<radiogroup class="indent" orient="horizontal" preference="taskmail_showMessageOnMouseClick">
+			<radio id="taskmail-showMessageLeft"   value="LEFT"   label="&taskmail-UI-left;"   accesskey="&taskmail-UI-left-key;" selected="true"/>
+			<radio id="taskmail-showMessageMiddle" value="MIDDLE" label="&taskmail-UI-middle;" accesskey="&taskmail-UI-middle-key;"/>
+		</radiogroup>
+
+    	<checkbox preference="taskmail-pref-transientScope" label="&transientScope;"   accesskey="&transientScope-key;"/>
+	</groupbox>
+	
+    <groupbox>
+      <caption label="&states.caption;"/>
+	    <label control="taskmail-stateList" value="&prefs.state.intro;"/>
+    	<hbox>
+	      <listbox id="taskmail-stateList" flex="1" rows="10" ondblclick="TASKMAIL.PREFS.editState();" onselect="TASKMAIL.PREFS.selectState();"></listbox>
+	      <vbox>
+	        <button label="&addState;" accesskey="&addState.key;" oncommand="TASKMAIL.PREFS.addState();"/>
+	        <button label="&editState;" accesskey="&editState.key;" oncommand="TASKMAIL.PREFS.editState();"/>
+	        <button label="&removeState;" accesskey="&removeState.key;" oncommand="TASKMAIL.PREFS.deleteState();" id="taskmail-deleteStateButton"/>
+	        <separator orient="horizontal"/>
+	        <button label="&upState;" accesskey="&upState.key;" oncommand="TASKMAIL.PREFS.upState();"/>
+	        <button label="&downState;" accesskey="&downState.key;" oncommand="TASKMAIL.PREFS.downState();"/>
+	      </vbox>
+	    </hbox>
+	    <label value="&prefs.state.warning;"/>
+	    <label value="&prefs.state.done;"/>
+    </groupbox>
+  </prefpane>
+  
+  <prefpane id="taskmail-reportPane" label="&prefs.pane.report;">
+    <preferences>
+      <preference id="taskmail_report_to" name="extensions.taskmail.report.to" type="string"/>
+      <preference id="taskmail_report_cc" name="extensions.taskmail.report.cc" type="string"/>
+      <preference id="taskmail_report_subject" name="extensions.taskmail.report.subject" type="string"/>
+      <preference id="taskmail_report_body" name="extensions.taskmail.report.body" type="string"/>
+    </preferences>
+    <groupbox>
+      <caption label="&report.caption;"/>
+      <grid>
+        <columns>
+          <column/>
+          <column flex="1"/>
+        </columns>
+        <rows>
+          <row>
+            <spacer/>
+            <label value="&fields.comment;"/>
+          </row>
+          <row>
+            <label control="taskmail-report_to" value="&field.to; :"/>
+            <textbox preference="taskmail_report_to" id="taskmail-report_to" flex="1"/>
+          </row>
+          <row>
+            <label control="taskmail-report_cc" value="&field.cc; : "/>
+            <textbox preference="taskmail_report_cc" id="taskmail-report_cc"/>
+          </row>
+          <row>
+            <label control="taskmail-report_subject" value="&field.subject; : "/>
+            <textbox preference="taskmail_report_subject" id="taskmail-report_suject"/>
+          </row>
+          <row>
+            <label control="taskmail-report_body" value="&field.body; : "/>
+            <textbox preference="taskmail_report_body" id="taskmail-report_body" multiline="true" rows="15" width="450"/>
+          </row>
+          <row>
+            <spacer/>
+            <label value="documentation" class="text-link" href="http://tasksandmails.mozdev.org/manual.html" onclick="TASKMAIL.PREFS.loadManual(event);"/></row>
+            <row>
+              <spacer/>
+              <button label="&reset;" accesskey="&reset.key;" oncommand="TASKMAIL.PREFS.resetReportPrefs();"/>
+            </row>
+          </rows>
+        </grid>
+      </groupbox>
+    </prefpane>
+  </prefwindow>

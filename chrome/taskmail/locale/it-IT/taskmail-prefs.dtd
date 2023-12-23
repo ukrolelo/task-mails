@@ -1,0 +1,33 @@
+<!ENTITY window.title "Opzioni di Task &amp; mail">
+<!ENTITY prefs.pane.report "Report">
+<!ENTITY states.caption "Stato attività">
+<!ENTITY report.caption "Report attività">
+<!ENTITY fields.comment "Per separare gli indirizzi utilizzare una virgola nei campi A e CC. ">
+<!ENTITY field.to "A">
+<!ENTITY field.cc "CC">
+<!ENTITY field.subject "Oggetto">
+<!ENTITY field.body "Corpo">
+<!ENTITY reset "Reset">
+<!ENTITY reset.key "R">
+<!ENTITY prefs.pane.state "Stato">
+<!ENTITY prefs.state.intro "Lo stato può essere usato per organizzare e filtrare le attività.">
+<!ENTITY prefs.state.warning "Attenzione, non cancellare uno stato ancora utilizzato.">
+<!ENTITY prefs.state.done "Lo stato Fatto può essere rinominato, ma deve mantenere il suo significato.">
+<!ENTITY addState "Aggiungi">
+<!ENTITY editState "Modifica">
+<!ENTITY removeState "Elimina">
+<!ENTITY addState.key "A">
+<!ENTITY editState.key "M">
+<!ENTITY removeState.key "E">
+<!ENTITY upState "Su">
+<!ENTITY upState.key "S">
+<!ENTITY downState "Giù">
+<!ENTITY downState.key "G">
+<!ENTITY taskmail-UI            "Interface">
+<!ENTITY taskmail-UI-label      "Show linked messages when select a task with :">
+<!ENTITY taskmail-UI-left       "Left button">
+<!ENTITY taskmail-UI-left-key   "L">
+<!ENTITY taskmail-UI-middle     "Middle mouse">
+<!ENTITY taskmail-UI-middle-key "M">
+<!ENTITY transientScope         "Make scope transient (on folder change, not on 'view linked message').">
+<!ENTITY transientScope-key     "t">

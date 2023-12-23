@@ -1,5 +1,11 @@
 @import url(chrome://global/skin/);
 
+.subfolderColumnHeader {
+	list-style-image: url('chrome://messenger/skin/icons/thread-col.png');
+	padding: 0px;
+	margin:0px;
+}
+
 .taskColumnHeader {
 	list-style-image: url('chrome://taskmail/skin/link_task.png');
 	padding-left: 0px;
@@ -8,11 +14,173 @@
 	margin-right: 0px;
 }
 
-.icon-mail-column  {
-	padding-left:3px;
+.priorityColumnHeader {
+	list-style-image: url('chrome://taskmail/skin/exclam.png');
+	padding-top:1px;
+	text-align:center; 		/* as the header doesn't a label we can center the column. */
 }
 
-#taskList {
+.priorityAscendingColumnHeader {
+	list-style-image: url('chrome://taskmail/skin/exclamAscending.png');
+	padding-top:1px;
+	text-align:center; 		/* as the header doesn't a label we can center the column. */
+}
+
+.priorityDescendingColumnHeader {
+	list-style-image: url('chrome://taskmail/skin/exclamDescending.png');
+	padding-top:1px;
+	text-align:center; 		/* as the header doesn't a label we can center the column. */
+}
+
+.stateColumnHeader {
+}
+
+treechildren::-moz-tree-image(subfolder)
+{
+  list-style-image: url('chrome://messenger/skin/icons/thread.png');
+}
+
+treechildren::-moz-tree-image(linked)
+{
+  list-style-image: url('chrome://taskmail/skin/link_mail.jpg');
+}
+
+treechildren::-moz-tree-image(linked_hilight)
+{
+  list-style-image: url('chrome://taskmail/skin/link_mail_hilight.jpg');
+}
+
+treechildren::-moz-tree-image(linked_outside)
+{
+  list-style-image: url('chrome://taskmail/skin/link_mail_outside.jpg');
+}
+
+treechildren::-moz-tree-cell-text(next-task)
+{
+  color : rgb(255,165,0);
+  font-weight: bold;
+}
+
+treechildren::-moz-tree-cell-text(overdue-task)
+{
+  color : rgb(255,0,0);
+  font-weight: bold;
+}
+
+#taskmail-taskList {
 	padding :  0px;
 	margin : 0px;
+	border-top: 1px solid rgb(0,0,0);
+}
+
+.minorLabel {
+	color : rgb(125,125,125);
+}
+
+.filterLabel {
+	color : rgb(125,125,125);
+	padding-top:5px;	
+}
+
+#taskmail-addTask label {
+	margin-top: 5px;
+}
+
+treechildren::-moz-tree-cell-text(taskPriority) {
+	color: #FFFFFF;
+	text-align: center;
+}
+
+treechildren::-moz-tree-cell(taskPriority0) {
+	background-color: #00e43f;
+}
+
+treechildren::-moz-tree-cell(taskPriority1) {
+	background-color: #00e7a0;
+}
+
+treechildren::-moz-tree-cell(taskPriority2) {
+	background-color: #00d1ea;
+}
+
+treechildren::-moz-tree-cell(taskPriority3) {
+	background-color: #0071ed;
+}
+
+treechildren::-moz-tree-cell(taskPriority4) {
+	background-color: #000ff0;
+}
+
+treechildren::-moz-tree-cell(taskPriority5) {
+	background-color: #5400f3;
+}
+
+treechildren::-moz-tree-cell(taskPriority6) { 
+	background-color: #ba00f6;
+}
+
+treechildren::-moz-tree-cell(taskPriority7) {
+	background-color: #f900cd;
+}
+
+treechildren::-moz-tree-cell(taskPriority8) {
+	background-color: #fc0068;
+}
+
+treechildren::-moz-tree-cell(taskPriority9) {
+	background-color: #ff0000;
+}
+
+radio[pane=taskmail-pane] {list-style-image: url("chrome://taskmail/skin/generalPane.png")}
+radio[pane=taskmail-reportPane] {list-style-image: url("chrome://taskmail/skin/reportPane.png")}
+
+#taskmail-qfb-task {
+  list-style-image:  url("chrome://taskmail/skin/link_task.png") !important;
+}
+
+#taskmail-qfb-task-linked {
+  list-style-image:  url("chrome://taskmail/skin/link_task_hilight.png") !important;
+}
+
+#taskmail-qfb-task-thread {
+  list-style-image:  url("chrome://messenger/skin/icons/thread.png") !important;
+}
+
+#taskmail-menuAddTask, #taskmail-menu-selectLinked, #taskmail-menu-goNextMail {
+  list-style-image:url('chrome://taskmail/skin/taskmail_logo_menu.png');
+}
+
+.checkbox-no-label > .checkbox-label-box {
+   display:none;
+}
+
+#taskmail-sticky-view,
+#taskmail-sticky-text {
+  background: none;
+  border-width: 0;
+  -moz-border-image: none;
+  margin-right:2px;
+}
+
+#taskmail-sticky-text, #taskmail-sticky-view {
+  list-style-image: url("chrome://messenger/skin/icons/xp-pin-grey.png");
+}
+
+#taskmail-sticky-text[checked], #taskmail-sticky-view[checked] {
+  list-style-image: url("chrome://messenger/skin/icons/xp-pin-red.png");
+}
+
+#taskmail-fb {
+	border-top: 1px solid rgb(255,255,255);
+	border-bottom: 1px solid rgb(255,255,255);
+	background-image: -moz-linear-gradient(center top , rgb(242, 247, 253) 0pt, rgb(233, 242, 252) 12px, rgb(227, 238, 251) 12px, rgb(227, 238, 251) 100%);
+}
+
+/*#folderTree treechildren::-moz-tree-cell-text(taskmail-viewedFolder) {
+	color: #FF0000;
+	font-weight: bold;
+}*/
+
+#folderTree treechildren::-moz-tree-image(taskmail-viewedFolder) {
+  list-style-image: url("chrome://taskmail/skin/taskmail_logo_menu.png");
 }

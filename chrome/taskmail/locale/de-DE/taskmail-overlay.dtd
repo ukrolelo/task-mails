@@ -1,0 +1,84 @@
+<!ENTITY menuAddTask           "Aufgabe hinzufügen">
+<!ENTITY menuAddTaskWithLink   "Verknüpfte Aufgabe hinzufügen">
+<!ENTITY menuUpdate            "Aufgabe aktualisieren">
+<!ENTITY menuDelete            "Aufgabe löschen">
+<!ENTITY menuSelectLinked      "Aufgaben oder Nachrichten auswählen">
+<!ENTITY menuViewTaskPane      "Ansicht der Aufgaben &amp; Nachrichten">
+<!ENTITY menuGoNextTaskMail    "Nächste Aufgabe oder Nachricht">
+<!ENTITY menuLinkTaskMail      "Aufgabe(n) und Nachrichte(n) verknüpfen">
+<!ENTITY menuUnlinkTaskMail    "Aufgabe(n) und Nachrichte(n) trennen">
+<!ENTITY menuHelp              "Hilfe">
+<!ENTITY menuHelpKey           "H">
+<!ENTITY linkTask     "Verknüpfung mit Aufgaben">
+<!ENTITY linkNewTask  "Verknüpfung mit neuer Aufgabe">
+<!ENTITY linkMail     "Verknüpfung mit Nachrichten">
+<!ENTITY unlinkTasks  "Aufgaben abtrennen">
+<!ENTITY unlinkMail   "Nachrichten abtrennen">
+<!ENTITY goNextTask   "Nächste Aufgabe">
+<!ENTITY goNextMail   "Nächste Nachricht">
+<!ENTITY selectMail   "Nachrichten auswählen">
+<!ENTITY selectTask   "Aufgaben auswählen">
+<!ENTITY goFolder     "Zum Ordner">
+<!ENTITY viewFolderTask  "Aufgaben im Ordner anzeigen">
+<!ENTITY add          "Hinzufügen">
+<!ENTITY addWithLink  "Mit Verknüpfung hinzufügen">
+<!ENTITY update       "Aktualisieren">
+<!ENTITY delete       "Löschen">
+<!ENTITY markDone     "Als {s} markieren">
+<!ENTITY changePriority        "Priorität ändern">
+<!ENTITY incrementPriority     "Höher">
+<!ENTITY decrementPriority     "Niedriger">
+<!ENTITY save                  "Speichern">
+<!ENTITY cancel                "Abbrechen">
+<!ENTITY moveTask              "Verschieben nach">
+<!ENTITY moveHere              "Hier">
+<!ENTITY state                 "Status">
+<!ENTITY title                 "Titel">
+<!ENTITY detail                "Detail">
+<!ENTITY priority              "Priorität">
+<!ENTITY detailTTP             "Enter oder CTRL-Enter = Speichern, SHIFT-Escape = Abbrechen">
+<!ENTITY dates                 "Datum">
+<!ENTITY createDate            "Erstellt am">
+<!ENTITY dueDate               "Fällig am">
+<!ENTITY completeDate          "Abschluß am">
+<!ENTITY stateFilterTTP        "Status Filter">
+<!ENTITY activeFilterTTP       "'Offen' und 'zu folgen'">
+<!ENTITY currentFilterTTP      "Alle unerledigten Aufgaben">
+<!ENTITY linkMailHeader        "Verknüpfung mit Nachrichten">
+<!ENTITY linkTaskHeader        "Verknüpfung mit Aufgaben">
+<!ENTITY filter.label          "Filter : ">
+<!ENTITY toDoStateFilter       "Offen">
+<!ENTITY toFollowStateFilter   "zu folgen">
+<!ENTITY activeStateFilter     "aktiv">
+<!ENTITY currentStateFilter    "aktuell">
+<!ENTITY allStateFilter        "Alle">
+<!ENTITY allViewFilter         "Alle Ordner">
+<!ENTITY mailViewFilter        "Nachricht">
+<!ENTITY subFolderViewFilter   "Unterordner">
+<!ENTITY folderViewFilter      "Ordner">
+<!ENTITY hotListViewFilter     "Mit Priorität ">
+<!ENTITY textFilter            "Filtere Aufgaben nach ...">
+<!ENTITY stickyViewFilterTTP   "Ansicht bei Verzeichniswechsel beibehalten?">
+<!ENTITY textFilterTTP         "Text Filter bei Dateiwechsel beibehalten ?">
+<!ENTITY viewFilterTTP         "Filter Ansicht">
+<!ENTITY allViewTTP            "Aufgaben aus allen Ordnern">
+<!ENTITY mailViewTTP           "Nur mit der aktuellen nachricht verknüpfte Aufgaben">
+<!ENTITY hotListViewFilterTTP  "Die wichtigsten Aufgaben">
+<!ENTITY addTask               "Aufgabe hinzufügen">
+<!ENTITY header.subfolder      "Is task outside the current subfolder">
+<!ENTITY msgColHeadLink        "Verknüpfung mit Aufgabe">
+<!ENTITY taskColHeadLink       "Verknüpfung mit Nachricht">
+<!ENTITY taskColHeadSubfolder  "Im Unterordner">
+<!ENTITY createDateCol         "Erstellt am">
+<!ENTITY dueDateCol            "Fällig am">
+<!ENTITY completeDateCol       "Abschluß am">
+<!ENTITY foldernameCol         "Ordner">
+<!ENTITY composeReport         "Report erstellen">
+<!ENTITY qfb-task              "Aufgabe">
+<!ENTITY qfb-taskTTP           "Nur Nachrichten mit Aufgaben zeigen">
+<!ENTITY qfb-task-link         "Ausgewählte Aufgabe">
+<!ENTITY qfb-task-linkTTP      "Nur mit ausgewählten Aufgaben verknüpfte Nachrichten zeigen.">
+<!ENTITY qfb-task-thread       "Aufgabe mit Thread">
+<!ENTITY qfb-task-threadTTP    "Nachrichten oder Thread anzeigen.">
+<!ENTITY menuOptions           "Optionen">
+<!ENTITY menuOptionsKey        "O">

@@ -1,0 +1,33 @@
+<!ENTITY window.title           "Options de Task &amp; mail">
+<!ENTITY prefs.pane.report      "Rapport">
+<!ENTITY states.caption         "Etat de tâches">
+<!ENTITY report.caption         "Rapport de tâches">
+<!ENTITY fields.comment         "Pour les champs Pour et Copie à, virgule pour séparer plusieurs destinaitaires.">
+<!ENTITY field.to               "Pour">
+<!ENTITY field.cc               "Copie à">
+<!ENTITY field.subject          "Sujet">
+<!ENTITY field.body             "Corps">
+<!ENTITY reset                  "Réinitialiser">
+<!ENTITY reset.key              "R">
+<!ENTITY prefs.pane.state       "Etats">
+<!ENTITY prefs.state.intro      "Les états peuvent être utilisés pour organiser et filtrer les tâches.">
+<!ENTITY prefs.state.warning    "Attention, ne pas supprimer un état qui serait utilisé.">
+<!ENTITY prefs.state.done       "L'état Fait peut être renommé mais doit garder sa signification.">
+<!ENTITY addState               "Ajouter">
+<!ENTITY editState              "Modifier">
+<!ENTITY removeState            "Supprimer">
+<!ENTITY addState.key           "A">
+<!ENTITY editState.key          "M">
+<!ENTITY removeState.key        "S">
+<!ENTITY upState                "Monter">
+<!ENTITY upState.key            "M">
+<!ENTITY downState              "Descendre">
+<!ENTITY downState.key          "D">
+<!ENTITY taskmail-UI            "Interface">
+<!ENTITY taskmail-UI-label      "Affichage de messages liés lors de la sélection d'une tâche avec :">
+<!ENTITY taskmail-UI-left       "Bouton gauche">
+<!ENTITY taskmail-UI-left-key   "G">
+<!ENTITY taskmail-UI-middle     "Bouton milieu">
+<!ENTITY taskmail-UI-middle-key "M">
+<!ENTITY transientScope         "Rendre les vues temporaires (changement de folder, voir les messages liés n'est pas concerné).">
+<!ENTITY transientScope-key     "t">

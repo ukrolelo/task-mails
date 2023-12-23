@@ -1,0 +1,84 @@
+<!ENTITY menuAddTask           "Een taak toevoegen">
+<!ENTITY menuAddTaskWithLink   "Een gelinkte taak toevoegen">
+<!ENTITY menuUpdate            "Taak bijwerken">
+<!ENTITY menuDelete            "Taak verwijderen">
+<!ENTITY menuSelectLinked      "Selecteer taken of berichten">
+<!ENTITY menuViewTaskPane      "Tasks &amp; Mails Scherm">
+<!ENTITY menuGoNextTaskMail    "Ga naar volgende taak/bericht">
+<!ENTITY menuLinkTaskMail      "Link taken en berichten">
+<!ENTITY menuUnlinkTaskMail    "Verbreek link">
+<!ENTITY menuHelp              "Help">
+<!ENTITY menuHelpKey           "H">
+<!ENTITY linkTask     "Link aan taken">
+<!ENTITY linkNewTask  "Link aan een nieuwe taak">
+<!ENTITY linkMail     "Link aan berichten">
+<!ENTITY unlinkTasks  "Link van taken verbreken">
+<!ENTITY unlinkMail   "Link van berichten verbreken">
+<!ENTITY goNextTask   "Ga naar volgende taak">
+<!ENTITY goNextMail   "Ga naar volgend bericht">
+<!ENTITY selectMail   "Selecteer berichten">
+<!ENTITY selectTask   "Selecteer taken">
+<!ENTITY goFolder     "Ga naar folder">
+<!ENTITY viewFolderTask  "View folder's tasks">
+<!ENTITY add          "Voeg toe">
+<!ENTITY addWithLink  "Voeg toe en link">
+<!ENTITY update       "Bijwerken">
+<!ENTITY delete       "Verwijderen">
+<!ENTITY markDone     "Markeer als {s}">
+<!ENTITY changePriority      "Wijzig prioriteit">
+<!ENTITY incrementPriority   "Verhogen">
+<!ENTITY decrementPriority   "Verlagen">
+<!ENTITY save                "Opslaan">
+<!ENTITY cancel              "Negeren">
+<!ENTITY moveTask            "Verplaats naar">
+<!ENTITY moveHere            "Hier"> 
+<!ENTITY state               "Status">
+<!ENTITY title               "Titel">
+<!ENTITY detail              "Beschrijving">
+<!ENTITY priority            "Prioriteit">
+<!ENTITY detailTTP           "Enter of CTRL-Enter = Opslaan, SHIFT-Esc = Negeren">
+<!ENTITY dates               "Data">
+<!ENTITY createDate          "Aangemaakt">
+<!ENTITY dueDate             "Streefdatum">
+<!ENTITY completeDate        "Afgewerkt">
+<!ENTITY stateFilterTTP      "Status filter">
+<!ENTITY activeFilterTTP     "Inclusief 'doen' en 'volgen'">
+<!ENTITY currentFilterTTP    "Alle taken behalve 'gedaan'">
+<!ENTITY linkMailHeader    "link met een bericht">
+<!ENTITY linkTaskHeader    "link met taken">
+<!ENTITY filter.label          "Filters : ">
+<!ENTITY toDoStateFilter       "doen">
+<!ENTITY toFollowStateFilter   "volgen">
+<!ENTITY activeStateFilter     "actief">
+<!ENTITY currentStateFilter    "actueel">
+<!ENTITY allStateFilter        "alle">
+<!ENTITY allViewFilter         "alle folders">
+<!ENTITY mailViewFilter        "bericht">
+<!ENTITY subFolderViewFilter   "subfolders">
+<!ENTITY folderViewFilter      "folder">
+<!ENTITY hotListViewFilter     "hot list">
+<!ENTITY textFilter            "Filter taken ...">
+<!ENTITY stickyViewFilterTTP   "Houd het uitzicht bij het veranderen van bestand?">
+<!ENTITY textFilterTTP         "Houd het tekstfilter bij het veranderen van bestand?">
+<!ENTITY viewFilterTTP         "Beeld filter">
+<!ENTITY allViewTTP            "Taken van alle folders">
+<!ENTITY mailViewTTP           "Alleen taken gelinkt aan huidig bericht">
+<!ENTITY hotListViewFilterTTP  "De belangrijkste taken">
+<!ENTITY addTask               "Voeg een taak toe">
+<!ENTITY header.subfolder      "Deze taak bevindt zich buiten de huidige subfolder">
+<!ENTITY msgColHeadLink        "Gelinkte taak">
+<!ENTITY taskColHeadLink       "Gelinkt bericht">
+<!ENTITY taskColHeadSubfolder  "In Subfolder">
+<!ENTITY createDateCol         "Aangemaakt">
+<!ENTITY dueDateCol            "Streefdatum">
+<!ENTITY completeDateCol       "Afgewerkt">
+<!ENTITY foldernameCol         "Folder">
+<!ENTITY composeReport         "Genereer rapportage">
+<!ENTITY qfb-task              "Taak">
+<!ENTITY qfb-taskTTP           "Toon alleen berichten met taken.">
+<!ENTITY qfb-task-link         "Geselecteerde taak">
+<!ENTITY qfb-task-linkTTP      "Toon alleen berichten gelinkt met geselecteerde taak.">
+<!ENTITY qfb-task-thread       "Taak met discussie">
+<!ENTITY qfb-task-threadTTP    "Toon berichten of discussie.">
+<!ENTITY menuOptions           "Options">
+<!ENTITY menuOptionsKey        "O">
