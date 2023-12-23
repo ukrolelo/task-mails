@@ -84,7 +84,7 @@
           </row>
           <row>
             <spacer/>
-            <label value="documentation" class="text-link" href="http://tasksandmails.mozdev.org/manual.html" onclick="TASKMAIL.PREFS.loadManual(event);"/></row>
+            <label value="documentation" class="text-link" href="http://gorsini.free.fr/tasksandmails/manuel_en.html" onclick="TASKMAIL.PREFS.loadManual(event);"/></row>
             <row>
               <spacer/>
               <button label="&reset;" accesskey="&reset.key;" oncommand="TASKMAIL.PREFS.resetReportPrefs();"/>

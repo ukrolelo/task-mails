@@ -1,3 +1,5 @@
+Components.utils.import("resource:///modules/MailUtils.js");
+
 if (!TASKMAIL)
 	var TASKMAIL = {};
 if (!TASKMAIL.UI)
@@ -323,21 +325,17 @@ TASKMAIL.UI = {
 		
 		// Subfolder icon
 		var cell = document.createElement("treecell");
-		cell.setAttribute('label', null);
 		try {
 			if (aTask.folderURI != GetSelectedMsgFolders()[0].URI) {
-				cell.setAttribute('properties', 'subfolder');
-			} else {
-				cell.setAttribute('properties', null);
+				cell.setAttribute("properties", 'subfolder');
 			}
 		} catch (err) {
-			cell.setAttribute('properties', null);
+			// Nothing
 		}
 		row.appendChild(cell);
 		
 		// link icon
 		cell = document.createElement('treecell');
-		cell.setAttribute('label', null);
 		row.appendChild(cell);
 
 		// priority
@@ -360,7 +358,10 @@ TASKMAIL.UI = {
 		row.appendChild(cell);
 
 		cell = document.createElement('treecell');
-		cell.setAttribute('label', this.formatDate(aTask.dueDate));
+		var date = this.formatDate(aTask.dueDate);
+		if (date != null) {
+			cell.setAttribute('label', date);
+		}		
 		if (TASKMAIL.isNext(aTask)) {
 			cell.setAttribute("properties", "next-task");
 		} else if (TASKMAIL.isOverdue(aTask)) {
@@ -370,7 +371,10 @@ TASKMAIL.UI = {
 		
 
 		cell = document.createElement('treecell');
-		cell.setAttribute('label', this.formatDate(aTask.completeDate));
+		date = this.formatDate(aTask.completeDate);
+		if (date != null) {
+			cell.setAttribute('label', date);
+		}
 		row.appendChild(cell);
 
 		// folderName
@@ -504,7 +508,8 @@ TASKMAIL.UI = {
 			document.getElementById("taskmail-search").reset();
 		}
 		
-		if (!sticky) {
+		// BUG #8, on set viewed car si démarrage TB avec sticky, on aurait pas la vue correcte.
+        if (!sticky || TASKMAIL.UI.thunderbirdInit) {
 			var folder = GetSelectedMsgFolders()[0];
 			TASKMAIL.UI.viewedFolder = folder;
 		} 
@@ -557,11 +562,13 @@ TASKMAIL.UI = {
 	
 	/**
 	 * called on task selection.
+	 * Provoque refresh de la colonne de liaison dans la liste des messages
+	 * et la status bar.
 	 */
 	onTaskSelect : function() {
 		TASKMAIL.log("onTaskSelect");
+		// rafraichie la colonne de liaison dans la liste des messages.
 		var tree = document.getElementById("threadTree");
-		// parcours tout les taches et regarde s'il existe une tache liée
 		var column = tree.columns.getNamedColumn("taskmail-colTask");
 		tree.treeBoxObject.invalidateColumn(column);
 		TASKMAIL.UILink.lastLinkedShowed = null;
@@ -620,6 +627,9 @@ TASKMAIL.UI = {
 		}
 	},
 
+	/**
+	 * Met à jour les icones de liaisons dans le taskPanel en fonction des messages sélectionnés.
+	 **/
 	refreshTaskLink : function() {
 		var selectedMailKey = null;
 		try {
@@ -645,7 +655,9 @@ TASKMAIL.UI = {
 			} else if (linkType == 1) {
 				linkURL = "linked";
 			}
-			row.childNodes[0].childNodes[1].setAttribute("properties", linkURL);
+			if (linkURL != null) {
+			   row.childNodes[0].childNodes[1].setAttribute("properties", linkURL);
+		}
 		}
 	},
 
@@ -662,6 +674,7 @@ TASKMAIL.UI = {
 	},
 
 	/**
+	 * recupére les tâches et les liens pour la vue en cours.
 	 * @return Content (only one, flat, no arbo).
 	 */
 	retrieveTasks : function() {
@@ -738,6 +751,9 @@ TASKMAIL.UI = {
 		return temp;
 	},
 	
+	/**
+	 * Récupère les tâches et remplit le taskPanel, rafraichit la UI
+	 **/
 	getTaskList : function() {
 		// On va remonter les liens, on reset donc les tableaux
 		TASKMAIL.Link.resetLink();
@@ -1106,12 +1122,12 @@ TASKMAIL.UI = {
 		prefs.addObserver("", this, false);
 
 		// charge les états pour la liste de tâches et le détail d'une tâche.
-    this.getStatesFromPref();
+		this.getStatesFromPref();
     
-    this.initialiseOrder();
+		this.initialiseOrder();
     
-    // replace default getCellProperties.
-    this.oldGetCellProperties = gFolderTreeView.getCellProperties;
+		// replace default getCellProperties.
+		this.oldGetCellProperties = gFolderTreeView.getCellProperties;
 		gFolderTreeView.getCellProperties = TASKMAIL.UI.new_getCellProperties;
 	},
 	
@@ -1302,6 +1318,7 @@ TASKMAIL.UI = {
   			return this.states[index].label; 
   		}
   	}  	
+	return "";
   },
   
   toggleTaskPane : function () {
@@ -1468,22 +1485,24 @@ TASKMAIL.UI = {
    */
   new_getCellProperties : function (row,col,props) {
 	//TASKMAIL.log("new_getCellProperties, row=" + row);
-    gFolderTreeView._rowMap[row].getProperties(props,col);
-    if (col.id == "folderNameCol") {
-    	var sticky = document.getElementById("taskmail-sticky-view").checked;
-    	var viewedFolder = TASKMAIL.UI.viewedFolder != null ? TASKMAIL.UI.viewedFolder.URI : null;
-    	var currentFolder = gDBView != null ? gDBView.msgFolder.URI : null;
-      if (gFolderTreeView._rowMap[row]._folder.URI == viewedFolder
-			    && (sticky || TASKMAIL.UI.viewedFolder.URI != currentFolder)) {
-	      var acAtomServ = Components.classes["@mozilla.org/atom-service;1"].getService(Components.interfaces.nsIAtomService);
-	      props.AppendElement(acAtomServ.getAtom("taskmail-viewedFolder"));
-      }      
-    }
-    // Call old version. Make color folder extension works with Tasks & mails.
-    //TASKMAIL.log("new_getCellProperties, appel ancetre");
-    gFolderTreeView.getCellProperties = TASKMAIL.UI.oldGetCellProperties;
-    gFolderTreeView.getCellProperties(row,col,props);
-    gFolderTreeView.getCellProperties = TASKMAIL.UI.new_getCellProperties;
+	//gFolderTreeView._rowMap[row].getProperties(props,col);
+	// Call old version. Make color folder extension works with Tasks & mails.
+	//TASKMAIL.log("new_getCellProperties, appel ancetre");
+	gFolderTreeView.getCellProperties = TASKMAIL.UI.oldGetCellProperties;
+	var result = gFolderTreeView.getCellProperties(row,col,props);
+	gFolderTreeView.getCellProperties = TASKMAIL.UI.new_getCellProperties;
+	if (col.id == "folderNameCol") {
+		var sticky = document.getElementById("taskmail-sticky-view").checked;
+	    	var viewedFolder = TASKMAIL.UI.viewedFolder != null ? TASKMAIL.UI.viewedFolder.URI : null;
+		var currentFolder = gDBView != null ? gDBView.msgFolder.URI : null;
+	     if (gFolderTreeView._rowMap[row]._folder.URI == viewedFolder
+		    && (sticky || TASKMAIL.UI.viewedFolder.URI != currentFolder)) {
+			//var acAtomServ = Components.classes["@mozilla.org/atom-service;1"].getService(Components.interfaces.nsIAtomService);
+		     //props.AppendElement(acAtomServ.getAtom("taskmail-viewedFolder"));
+			result += " taskmail-viewedFolder";
+		}      
+	}
+	return result;	
   }
 }
 
@@ -1513,6 +1532,7 @@ TASKMAIL.UILink = {
 					.getString("LinkAlertTooManyObjects"));
 			return;
 		}
+	    try {
 		if (mails.length == 1) {
 			for (var i = 0; i < taskIds.length; i++) {
 				var taskId = taskIds[i];
@@ -1523,6 +1543,9 @@ TASKMAIL.UILink = {
 				TASKMAIL.DB.linkTaskSQLite(taskIds[0], mails[i]);
 			}
 		}
+	    } catch(e) {
+			TASKMAIL.log(e);
+	    }
 		TASKMAIL.UI.refreshTaskList();
 		TASKMAIL.UI.onTaskSelect();
 	},
@@ -1622,7 +1645,7 @@ TASKMAIL.UILink = {
 					var currentFolderURI = TASKMAIL.UI.viewedFolder.URI;
 					var sticky = document.getElementById("taskmail-sticky-view").checked;
 					if (taskFolderURI != currentFolderURI && !sticky) {
-						var folderDB = GetMsgFolderFromUri(taskFolderURI, false);
+						var folderDB = MailUtils.getFolderForURI(taskFolderURI, false);
 						TASKMAIL.UI.viewedFolder = folderDB;
 						TASKMAIL.UI.refreshTaskList();
 						// to refresh folder viewed icon in folder tree. 
@@ -1857,7 +1880,7 @@ TASKMAIL.Link = {
 	},
 
 	/**
-	 * 
+	 * Détermine le type de lien associé à la tâche spécifié
 	 * @param taskID
 	 * @param taskFolderURI, string, folder de la tâche
 	 * @param messageKeys, [messageKey], current selected message keys

@@ -5,7 +5,7 @@
     <!-- Tasks and mails -->
     <em:id>{c7adabc0-01aa-11df-8a39-0800200c9a66}</em:id>
     <em:name>tasks and mails</em:name>
-    <em:version>2.3.1</em:version>
+    <em:version>2.5</em:version>
     <em:description>Tasks management based on linking tasks to emails.</em:description>
     <em:creator>gilles orsini</em:creator>
     <em:type>2</em:type>
@@ -15,11 +15,11 @@
 	    <Description>
 		    <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
 		    <em:minVersion>3.1</em:minVersion>
-		    <em:maxVersion>14.*</em:maxVersion>
+		    <em:maxVersion>31.*</em:maxVersion>
 	    </Description>
     </em:targetApplication>
 
-    <em:homepageURL>http://tasksandmails.mozdev.org/</em:homepageURL>
+    <em:homepageURL>http://gorsini.free.fr/tasksandmails/</em:homepageURL>
     <em:optionsURL>chrome://taskmail/content/taskmail-prefs.xul</em:optionsURL>
     <em:aboutURL/>
     <em:iconURL>chrome://taskmail/skin/taskmail_icon.png</em:iconURL>
@@ -28,8 +28,6 @@
     <em:translator>Marco</em:translator>
     <em:translator>Danisan</em:translator>
     <em:translator>Hajo</em:translator>
-    
-    <em:hidden/>
-    <em:updateURL>https://www.mozdev.org/p/updates/tasksandmails/%7Bc7adabc0-01aa-11df-8a39-0800200c9a66%7D/update.rdf</em:updateURL>
+
   </Description>
 </RDF>

@@ -11,12 +11,12 @@ TASKMAIL.QFB = {
 	  getEnabled: function(scope, op)
 	    {
 	      return (scope == Components.interfaces.nsMsgSearchScope.offlineMail) &&
-	             (op == Components.interfaces.nsMsgSearchOp::Is);
+	             (op == Components.interfaces.nsMsgSearchOp.Is);
 	    },
 	  getAvailable: function(scope, op)
 	    {
 	      return (scope == Components.interfaces.nsMsgSearchScope.offlineMail) &&
-	             (op == Components.interfaces.nsMsgSearchOp::Is);
+	             (op == Components.interfaces.nsMsgSearchOp.Is);
 	    },
 	  getAvailableOperators: function(scope, length)
 	    {
@@ -50,12 +50,12 @@ TASKMAIL.QFB = {
 	  getEnabled: function(scope, op)
 	    {
 	      return (scope == Components.interfaces.nsMsgSearchScope.offlineMail) &&
-	             (op == Components.interfaces.nsMsgSearchOp::Is);
+	             (op == Components.interfaces.nsMsgSearchOp.Is);
 	    },
 	  getAvailable: function(scope, op)
 	    {
 	      return (scope == Components.interfaces.nsMsgSearchScope.offlineMail) &&
-	             (op == Components.interfaces.nsMsgSearchOp::Is);
+	             (op == Components.interfaces.nsMsgSearchOp.Is);
 	    },
 	  getAvailableOperators: function(scope, length)
 	    {

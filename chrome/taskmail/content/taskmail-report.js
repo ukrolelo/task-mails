@@ -1,3 +1,5 @@
+Components.utils.import("resource:///modules/MailUtils.js");
+
 if (!TASKMAIL.Report)
 	TASKMAIL.Report = {};
 TASKMAIL.Report = {
@@ -107,7 +109,7 @@ TASKMAIL.Report = {
 			aCurrent.tasks.splice(currentEnd + 1,aCurrent.tasks.length);
 		}
 		if (aCurrent.tasks.length > 0) {
-			var prettyName = GetMsgFolderFromUri(aCurrent.tasks[0].folderURI, false).prettyName;
+			var prettyName = MailUtils.getFolderForURI(aCurrent.tasks[0].folderURI, false).prettyName;
 			aCurrent.folderName = prettyName;
 		}
 	},

@@ -1,3 +1,5 @@
+Components.utils.import("resource:///modules/MailUtils.js");
+
 if (!TASKMAIL)
 	var TASKMAIL = {};
 if (!TASKMAIL.DB)
@@ -174,7 +176,7 @@ TASKMAIL.DB = {
 				var completeDate   = this.convertSQLiteToDate(stat.getString(7));
 				var taskFolder     = stat.getString(8);
 				try {
-					var prettyName = GetMsgFolderFromUri(taskFolder, false).prettyName;
+					var prettyName = MailUtils.getFolderForURI(taskFolder, false).prettyName;
 				} catch (err) {
 					var prettyName = "";
 					Components.utils.reportError("getTaskListSQLite, taskFolder=" + taskFolder + "erreur=" + err);
@@ -410,7 +412,7 @@ TASKMAIL.DB = {
 				var messageId =  stat.getString(1);
 				var taskId = stat.getInt32(2);
 				try {
-					var folderDB = GetMsgFolderFromUri(messageFolderURI, false); 
+					var folderDB = MailUtils.getFolderForURI(messageFolderURI, false); 
 					var message = folderDB.msgDatabase.getMsgHdrForMessageID(messageId);
 					var messageKey = message.messageKey;
 					var threadKey = message.threadId;
