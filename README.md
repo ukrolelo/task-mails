@@ -1,5 +1,7 @@
 Archived
-by gilles.orsini
+by me
+
+Developed by gilles.orsini
 
 About this Add-on
 As project manager, I spend my time in Thunderbird has to be asked, to delegate actions, etc.. This module allows me, in a single tool, to manage my emails and tasks which are associated with them.
